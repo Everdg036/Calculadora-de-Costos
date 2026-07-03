@@ -1,0 +1,16 @@
+# Ejecutables compilados
+*.exe
+*.out
+*.app
+
+# Archivos de objeto y librerías
+*.o
+*.obj
+*.a
+*.lib
+
+# Carpetas temporales de Visual Studio / compiladores
+.vscode/
+build/
+Debug/
+Release/
