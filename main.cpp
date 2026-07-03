@@ -15,3 +15,14 @@ void calcularCostoImportacion() {
     
     double costoBase = 0.0;
     double pesoLibras = 0.0;
+//
+    double costoEnvio = pesoLibras * PRECIO_POR_LIBRA;
+    double valorCif = costoBase + costoEnvio + SEGURO_ENVIO;
+    
+    double montoArancel = valorCif * PORCENTAJE_ARANCEL;
+    double montoIva = (valorCif + montoArancel) * PORCENTAJE_IVA;
+    
+    double totalImpuestos = montoArancel + montoIva;
+    double costoTotal = valorCif + totalImpuestos;
+    
+    cout << fixed << setprecision(2);
