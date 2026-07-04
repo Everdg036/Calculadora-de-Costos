@@ -54,3 +54,19 @@ void calcularCostoImportacion() {
     cout << " COSTO TOTAL PUESTO EN CASA: $" << costoTotal << "\n";
     cout << "=========================================\n\n";
 }
+
+    int main() {
+    int opcion = 0;
+
+    do {
+        cout << "========== MENU PRINCIPAL ==========\n";
+        cout << "1. Ingresar producto a cotizar\n";
+        cout << "2. Salir\n";
+        cout << "====================================\n";
+        cout << "Seleccione una opcion: ";
+        
+        while (!(cin >> opcion)) {
+            cout << "Error: Seleccione una opcion valida (1 o 2): ";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
