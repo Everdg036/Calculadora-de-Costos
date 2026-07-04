@@ -40,3 +40,17 @@ void calcularCostoImportacion() {
     double costoTotal = valorCif + totalImpuestos;
     
     cout << fixed << setprecision(2);
+    
+    cout << "========RESUMEN DE TU COTIZACION========        \n";
+    cout << " Costo del articulo:       $" << costoBase << "\n";
+    cout << " Costo de envio (" << pesoLibras << " lbs): $" << costoEnvio << "\n";
+    cout << " Seguro y manejo:          $" << SEGURO_ENVIO << "\n";
+    cout << "-----------------------------------------\n";
+    cout << " Arancel aduanero (" << (PORCENTAJE_ARANCEL * 100) << "%):  $" << montoArancel << "\n";
+    cout << " IVA (" << (PORCENTAJE_IVA * 100) << "%):              $" << montoIva << "\n";
+    cout << "-----------------------------------------\n";
+    cout << " TOTAL DE IMPUESTOS:       $" << totalImpuestos << "\n";
+    cout << "=========================================\n";
+    cout << " COSTO TOTAL PUESTO EN CASA: $" << costoTotal << "\n";
+    cout << "=========================================\n\n";
+}
