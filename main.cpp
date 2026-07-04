@@ -70,3 +70,20 @@ void calcularCostoImportacion() {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
+
+        switch (opcion) {
+            case 1:
+                calcularCostoImportacion();
+                break;
+            case 2:
+                cout << "\nGracias por usar el cotizador\n";
+                break;
+            default:
+                cout << "\nOpcion no valida, Intente de nuevo.\n\n";
+                break;
+        }
+
+    } while (opcion != 2);
+
+    return 0;
+}
