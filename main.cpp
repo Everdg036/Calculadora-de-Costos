@@ -15,7 +15,21 @@ void calcularCostoImportacion() {
     
     double costoBase = 0.0;
     double pesoLibras = 0.0;
-//
+
+    cout << "Ingrese el costo base del articulo (USD): $";
+    while (!(cin >> costoBase) || costoBase < 0) {
+        cout << "Error: Ingrese un monto valido y mayor o igual a 0: $";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    
+    cout << "Ingrese el peso estimado del paquete (Libras): ";
+    while (!(cin >> pesoLibras) || pesoLibras < 0) {
+        cout << "Error: Ingrese un peso valido y mayor o igual a 0: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+
     double costoEnvio = pesoLibras * PRECIO_POR_LIBRA;
     double valorCif = costoBase + costoEnvio + SEGURO_ENVIO;
     
